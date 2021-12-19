@@ -49,8 +49,8 @@ class product:
 
     The following examples shows the execution and result in list format.
     >>> list(product('ABC', '123'))
-    [('A', '1'), ('A', '2'), ('A', '3'), ('B', '1'), ('B', '2'),\
-    ('B', '3'), ('C', '1'), ('C', '2'), ('C', '3')]
+    [('A', '1'), ('A', '2'), ('A', '3'), ('B', '1'), ('B', '2'), \
+('B', '3'), ('C', '1'), ('C', '2'), ('C', '3')]
     >>> list(product('12', repeat=2))
     [('1', '1'), ('1', '2'), ('2', '1'), ('2', '2')]
     >>> list(product(repeat=10))
@@ -83,7 +83,7 @@ def permutations(iterable, r=None):
     Return successive r length permutations of elements in the iterable.
     If r is not specified or is None, then r defaults to the
     length of the iterable and all possible full-length permutations are generated.
-    >>> permutations("ABCD", 2)
+    >>> list(permutations("ABCD", 2))[:3]
     [('A', 'B'), ('A', 'C'), ('A', 'D')]
     """
     pool = tuple(iterable)
@@ -116,10 +116,10 @@ def combinations_with_replacement(iterable: Iterable, r: int):
     [('A', 'A'), ('A', 'B'), ('A', 'C'), ('B', 'B'), ('B', 'C'), ('C', 'C')]
     >>> list(combinations_with_replacement(['1', '2', '3', '4'], 3))
     [('1', '1', '1'), ('1', '1', '2'), ('1', '1', '3'), ('1', '1', '4'), \
-    ('1', '2', '2'), ('1', '2', '3'), ('1', '2', '4'), ('1', '3', '3'), \
-    ('1', '3', '4'), ('1', '4', '4'), ('2', '2', '2'), ('2', '2', '3'), \
-    ('2', '2', '4'), ('2', '3', '3'), ('2', '3', '4'), ('2', '4', '4'), \
-    ('3', '3', '3'), ('3', '3', '4'), ('3', '4', '4'), ('4', '4', '4')]
+('1', '2', '2'), ('1', '2', '3'), ('1', '2', '4'), ('1', '3', '3'), \
+('1', '3', '4'), ('1', '4', '4'), ('2', '2', '2'), ('2', '2', '3'), \
+('2', '2', '4'), ('2', '3', '3'), ('2', '3', '4'), ('2', '4', '4'), \
+('3', '3', '3'), ('3', '3', '4'), ('3', '4', '4'), ('4', '4', '4')]
     >>> len(list(combinations_with_replacement([element for element in range(100)], 3)))
     171700
     >>> list(combinations_with_replacement('ABC', -999))
