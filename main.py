@@ -78,8 +78,20 @@ class product:
         return f"Product(args: {self.args}, repeat={self.repeat})"
 
 
-def permutations(iterable, length=None):
-    pass
+def permutations(iterable, r=None):
+    """
+    Return successive r length permutations of elements in the iterable.
+    If r is not specified or is None, then r defaults to the
+    length of the iterable and all possible full-length permutations are generated.
+    >>> permutations("ABCD", 2)
+    [('A', 'B'), ('A', 'C'), ('A', 'D')]
+    """
+    pool = tuple(iterable)
+    n = len(pool)
+    r = n if r is None else r
+    for indices in product(range(n), repeat=r):
+        if len(set(indices)) == r:
+            yield tuple(pool[i] for i in indices)
 
 
 def combinations(r, n):
@@ -156,10 +168,3 @@ def combinations_with_replacement(iterable: Iterable, r: int):
             # - that means all the combinations with replacement were yield already
             return None  # Stopping the program
 
-
-def main():
-    pass
-
-
-if __name__ == '__main__':
-    main()
