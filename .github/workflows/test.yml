@@ -1,0 +1,18 @@
+name: Tests
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout main branch
+      uses: actions/checkout@v2
+    - name: doctests
+      run: |
+        python -m doctest -v main.py
+    - name: run test module
+      run: |
+        python tests.py

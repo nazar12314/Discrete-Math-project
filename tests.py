@@ -17,8 +17,3 @@ assert list(main.permutations(['a', 'b', 'c'], 2)) == [('a', 'b'), ('a', 'c'), (
 assert list(main.permutations([['a'], ['b']], 3)) == []
 assert list(main.permutations('abc', 1)) == [('a',), ('b',), ('c',)]
 
-
-if __name__ == "__main__":
-    import doctest
-    print(doctest.testfile("main.py"))
-

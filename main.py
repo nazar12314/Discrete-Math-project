@@ -49,8 +49,8 @@ class product:
 
     The following examples shows the execution and result in list format.
     >>> list(product('ABC', '123'))
-    [('A', '1'), ('A', '2'), ('A', '3'), ('B', '1'), \
-('B', '2'), ('B', '3'), ('C', '1'), ('C', '2'), ('C', '3')]
+    [('A', '1'), ('A', '2'), ('A', '3'), ('B', '1'), ('B', '2'),\
+    ('B', '3'), ('C', '1'), ('C', '2'), ('C', '3')]
     >>> list(product('12', repeat=2))
     [('1', '1'), ('1', '2'), ('2', '1'), ('2', '2')]
     >>> list(product(repeat=10))
@@ -116,10 +116,10 @@ def combinations_with_replacement(iterable: Iterable, r: int):
     [('A', 'A'), ('A', 'B'), ('A', 'C'), ('B', 'B'), ('B', 'C'), ('C', 'C')]
     >>> list(combinations_with_replacement(['1', '2', '3', '4'], 3))
     [('1', '1', '1'), ('1', '1', '2'), ('1', '1', '3'), ('1', '1', '4'), \
-('1', '2', '2'), ('1', '2', '3'), ('1', '2', '4'), ('1', '3', '3'), \
-('1', '3', '4'), ('1', '4', '4'), ('2', '2', '2'), ('2', '2', '3'), \
-('2', '2', '4'), ('2', '3', '3'), ('2', '3', '4'), ('2', '4', '4'), \
-('3', '3', '3'), ('3', '3', '4'), ('3', '4', '4'), ('4', '4', '4')]
+    ('1', '2', '2'), ('1', '2', '3'), ('1', '2', '4'), ('1', '3', '3'), \
+    ('1', '3', '4'), ('1', '4', '4'), ('2', '2', '2'), ('2', '2', '3'), \
+    ('2', '2', '4'), ('2', '3', '3'), ('2', '3', '4'), ('2', '4', '4'), \
+    ('3', '3', '3'), ('3', '3', '4'), ('3', '4', '4'), ('4', '4', '4')]
     >>> len(list(combinations_with_replacement([element for element in range(100)], 3)))
     171700
     >>> list(combinations_with_replacement('ABC', -999))
@@ -167,4 +167,9 @@ def combinations_with_replacement(iterable: Iterable, r: int):
             # If the for loop ended successfully (no 'break')
             # - that means all the combinations with replacement were yield already
             return None  # Stopping the program
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
 
