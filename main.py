@@ -102,6 +102,22 @@ def combinations_with_replacement(iterable: Iterable, r: int):
 
     >>> list(combinations_with_replacement('ABC', 2))
     [('A', 'A'), ('A', 'B'), ('A', 'C'), ('B', 'B'), ('B', 'C'), ('C', 'C')]
+    >>> list(combinations_with_replacement(['1', '2', '3', '4'], 3))
+    [('1', '1', '1'), ('1', '1', '2'), ('1', '1', '3'), ('1', '1', '4'), \
+('1', '2', '2'), ('1', '2', '3'), ('1', '2', '4'), ('1', '3', '3'), \
+('1', '3', '4'), ('1', '4', '4'), ('2', '2', '2'), ('2', '2', '3'), \
+('2', '2', '4'), ('2', '3', '3'), ('2', '3', '4'), ('2', '4', '4'), \
+('3', '3', '3'), ('3', '3', '4'), ('3', '4', '4'), ('4', '4', '4')]
+    >>> len(list(combinations_with_replacement([element for element in range(100)], 3)))
+    171700
+    >>> list(combinations_with_replacement('ABC', -999))
+    Traceback (most recent call last):
+        ...
+    ValueError: r must be non-negative
+    >>> list(combinations_with_replacement(111, 2))
+    Traceback (most recent call last):
+        ...
+    TypeError: 'int' object is not iterable
     >>> list(combinations_with_replacement('ABC', 0))
     [()]
     >>> list(combinations_with_replacement('', 10))
