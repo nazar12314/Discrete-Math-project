@@ -1,4 +1,4 @@
-# Itertools (19th team)
+# Itertools (12th team)
 [![Tests](https://github.com/nazar12314/Discrete-Math-project/actions/workflows/test.yml/badge.svg)](https://github.com/nazar12314/Discrete-Math-project/actions/workflows/test.yml)
 ## Description
 Our version of the Python itertools module.
