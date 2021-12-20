@@ -12,7 +12,7 @@ def count(start=0, step=1):
     """
     n = start
     if step == 0:
-        return start
+        yield start
     else:
         while True:
             yield n
@@ -121,7 +121,10 @@ def permutations(iterable, r=None):
 
 def combinations(iterable, r):
     """
-
+    Returns sorted compinations of length r in iterable.
+    Permutations is used to get all possible combinations, then the sorted ones are picked out.
+    >>> list(combinations("ABCD", 2))
+    [('A', 'B'), ('A', 'C'), ('A', 'D'), ('B', 'C'), ('B', 'D'), ('C', 'D')]
     """
     pool = tuple(iterable)
     n = len(pool)
