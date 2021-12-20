@@ -3,13 +3,38 @@ from typing import Iterable
 
 
 def count(start=0, step=1):
-    while True:
-        start += step
+    """
+    Returns iterable object of endless cycle.
+    Usage:
+    count() -> 0, 1, 2, ...
+    count(8, 6) -> 8, 14, 20, ...
+    count(0, 0) -> 0
+    """
+    n = start
+    if step == 0:
         yield start
+    else:
+        while True:
+            yield n
+            n += step
 
 
 def cycle(iterable):
-    pass
+    """
+    Returns iterator with values
+    which are in iterable object.
+    cycle(['A', 'B', 'C']) -> A, B, C, A, B, C, ...
+    cycle(['ABCA']) -> A, B, C, A, A, B, ...
+    cycle(('C')) -> C, C, C, ...
+    """
+    lenght = len(iterable)
+    if lenght == 0:
+        return iterable
+    else:
+        while True:
+            for item in iterable:
+                yield item
+
 
 class repeat:
     """repeat
@@ -49,8 +74,8 @@ class product:
 
     The following examples shows the execution and result in list format.
     >>> list(product('ABC', '123'))
-    [('A', '1'), ('A', '2'), ('A', '3'), ('B', '1'), \
-('B', '2'), ('B', '3'), ('C', '1'), ('C', '2'), ('C', '3')]
+    [('A', '1'), ('A', '2'), ('A', '3'), ('B', '1'), ('B', '2'), \
+('B', '3'), ('C', '1'), ('C', '2'), ('C', '3')]
     >>> list(product('12', repeat=2))
     [('1', '1'), ('1', '2'), ('2', '1'), ('2', '2')]
     >>> list(product(repeat=10))
@@ -78,13 +103,34 @@ class product:
         return f"Product(args: {self.args}, repeat={self.repeat})"
 
 
-def permutations(iterable, length=None):
-    pass
+def permutations(iterable, r=None):
+    """
+    Return successive r length permutations of elements in the iterable.
+    If r is not specified or is None, then r defaults to the
+    length of the iterable and all possible full-length permutations are generated.
+    >>> list(permutations("ABCD", 2))[:3]
+    [('A', 'B'), ('A', 'C'), ('A', 'D')]
+    """
+    pool = tuple(iterable)
+    n = len(pool)
+    r = n if r is None else r
+    for indices in product(range(n), repeat=r):
+        if len(set(indices)) == r:
+            yield tuple(pool[i] for i in indices)
 
 
-def combinations(r, n):
-    pass
-
+def combinations(iterable, r):
+    """
+    Returns sorted compinations of length r in iterable.
+    Permutations is used to get all possible combinations, then the sorted ones are picked out.
+    >>> list(combinations("ABCD", 2))
+    [('A', 'B'), ('A', 'C'), ('A', 'D'), ('B', 'C'), ('B', 'D'), ('C', 'D')]
+    """
+    pool = tuple(iterable)
+    n = len(pool)
+    for indices in permutations(range(n), r):
+        if sorted(indices) == list(indices):
+            yield tuple(pool[i] for i in indices)
 
 def combinations_with_replacement(iterable: Iterable, r: int):
     """ Combinations with replacement
@@ -102,6 +148,22 @@ def combinations_with_replacement(iterable: Iterable, r: int):
 
     >>> list(combinations_with_replacement('ABC', 2))
     [('A', 'A'), ('A', 'B'), ('A', 'C'), ('B', 'B'), ('B', 'C'), ('C', 'C')]
+    >>> list(combinations_with_replacement(['1', '2', '3', '4'], 3))
+    [('1', '1', '1'), ('1', '1', '2'), ('1', '1', '3'), ('1', '1', '4'), \
+('1', '2', '2'), ('1', '2', '3'), ('1', '2', '4'), ('1', '3', '3'), \
+('1', '3', '4'), ('1', '4', '4'), ('2', '2', '2'), ('2', '2', '3'), \
+('2', '2', '4'), ('2', '3', '3'), ('2', '3', '4'), ('2', '4', '4'), \
+('3', '3', '3'), ('3', '3', '4'), ('3', '4', '4'), ('4', '4', '4')]
+    >>> len(list(combinations_with_replacement([element for element in range(100)], 3)))
+    171700
+    >>> list(combinations_with_replacement('ABC', -999))
+    Traceback (most recent call last):
+        ...
+    ValueError: r must be non-negative
+    >>> list(combinations_with_replacement(111, 2))
+    Traceback (most recent call last):
+        ...
+    TypeError: 'int' object is not iterable
     >>> list(combinations_with_replacement('ABC', 0))
     [()]
     >>> list(combinations_with_replacement('', 10))
@@ -141,9 +203,7 @@ def combinations_with_replacement(iterable: Iterable, r: int):
             return None  # Stopping the program
 
 
-def main():
-    pass
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
 
-
-if __name__ == '__main__':
-    main()
