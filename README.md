@@ -12,7 +12,16 @@ Returns iterable object of endless cycle.
 - cycle (Dimitriy)
 Returns iterator with values which are in iterable object.
 - repeat (Nazar)
+  Repeat(object [,times]) -> create an iterator which returns the object for the specified number of times.
+  If 'amount' is not specified, returns the object endlessly
 - product (Nazar)
+  Returns cartesian product of input iterables
+  Receives as a parameter an array of data, consisting of several groups of values.
+  This product function allows you to get a new set of groups in all possible variations
+  from an entered sequence of numbers or characters.
+  To compute the product of an iterable with itself,
+  specify the number of repetitions with the optional 'repeat' keyword argument.
+  For example, product(A, repeat=4) means the same as product(A, A, A, A).
 - permutations (Teodor)
   Generates successive r length permutations of an iterable.
   If r is not specified it defaults to the length of the iterable.
