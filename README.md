@@ -25,7 +25,7 @@ Returns iterator with values which are in iterable object.
   Generates successive r length combinations of elements in the iterable allowing individual elements to have successive repeats.
   The combination tuples are emitted in lexicographic ordering according to the order of the input iterable.
   Elements are treated as unique based on their position, not on their value.
-# Contributors (19-th team)
+# Contributors (12-th team)
 - Teodor Muzychuk (permutations, tests.py, README.md, GitHub actions)
 - Nazar Kononenko (repeat, product, GitHub management)
 - Serhii Matsyshyn (combinations_with_replacement)
