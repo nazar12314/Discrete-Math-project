@@ -119,11 +119,10 @@ def permutations(iterable, r=None):
             yield tuple(pool[i] for i in indices)
 
 
-def combinations(r, n):
+def combinations(iterable, r):
     """
 
     """
-    def combinations(iterable, r):
     pool = tuple(iterable)
     n = len(pool)
     for indices in permutations(range(n), r):
