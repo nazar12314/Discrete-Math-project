@@ -66,14 +66,14 @@ class product:
             yield tuple()
         else:
             # Include repeat case
-            self.args *= self.repeat
-            # Choose starting point
-            element = self.args[0]
+            elements = [tuple(element) for element in self.args] * self.repeat
+            result = [[]]
             # Iterate through elements in order to create combinations
-            for item in element if callable(element) else iter(element):
-                # 
-                for elements in product(*self.args[1:]):
-                    yield (item, ) + elements
+            for element in elements:
+                result = [x + [y] for x in result for y in element]
+            # Wrap elements into tuples and yield them
+            for element in result:
+                yield tuple(element)
     def __str__(self):
         return f"Product(args: {self.args}, repeat={self.repeat})"
 
