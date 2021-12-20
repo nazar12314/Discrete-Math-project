@@ -10,7 +10,8 @@ Our version of the Python itertools module.
 - permutations (Teodor)
   Generates successive r length permutations of an iterable.
   If r is not specified it defaults to the length of the iterable.
-  Iterates over the Cartesian square of the iterable using the product function.
+  Iterates over the Cartesian square of the range function using the product function.
+  Yields a tuple by using the indices from the Cartesian square
 - combinations (Nadia)
 - combinations_with_replacement (Serhii)
   Generates successive r length combinations of elements in the iterable allowing individual elements to have successive repeats.
