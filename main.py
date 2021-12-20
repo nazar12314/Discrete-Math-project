@@ -3,13 +3,38 @@ from typing import Iterable
 
 
 def count(start=0, step=1):
-    while True:
-        start += step
-        yield start
+    """
+    Returns iterable object of endless cycle.
+    Usage:
+    count() -> 0, 1, 2, ...
+    count(8, 6) -> 8, 14, 20, ...
+    count(0, 0) -> 0
+    """
+    n = start
+    if step == 0:
+        return start
+    else:
+        while True:
+            yield n
+            n += step
 
 
 def cycle(iterable):
-    pass
+    """
+    Returns iterator with values
+    which are in iterable object.
+    cycle(['A', 'B', 'C']) -> A, B, C, A, B, C, ...
+    cycle(['ABCA']) -> A, B, C, A, A, B, ...
+    cycle(('C')) -> C, C, C, ...
+    """
+    lenght = len(iterable)
+    if lenght == 0:
+        return iterable
+    else:
+        while True:
+            for item in iterable:
+                yield item
+
 
 class repeat:
     """repeat
@@ -95,8 +120,15 @@ def permutations(iterable, r=None):
 
 
 def combinations(r, n):
-    pass
+    """
 
+    """
+    def combinations(iterable, r):
+    pool = tuple(iterable)
+    n = len(pool)
+    for indices in permutations(range(n), r):
+        if sorted(indices) == list(indices):
+            yield tuple(pool[i] for i in indices)
 
 def combinations_with_replacement(iterable: Iterable, r: int):
     """ Combinations with replacement
