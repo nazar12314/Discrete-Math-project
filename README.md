@@ -31,3 +31,5 @@ Returns iterator with values which are in iterable object.
 - Serhii Matsyshyn (combinations_with_replacement)
 - Nadia Lakoma (combinations)
 - Dimitriy Yevchenko (count, cycle)
+# License
+Apache license. See LICENSE.
