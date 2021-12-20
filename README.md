@@ -15,6 +15,8 @@ Returns iterator with values which are in iterable object.
   Iterates over the Cartesian square of the range function using the product function.
   Yields a tuple by using the indices from the Cartesian square
 - combinations (Nadia)
+  Returns sorted compinations of length r in iterable.
+  Permutations is used to get all possible combinations, then the sorted ones are picked out.
 - combinations_with_replacement (Serhii)
   Generates successive r length combinations of elements in the iterable allowing individual elements to have successive repeats.
   The combination tuples are emitted in lexicographic ordering according to the order of the input iterable.
