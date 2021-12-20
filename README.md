@@ -8,6 +8,9 @@ Our version of the Python itertools module.
 - repeat (Nazar)
 - product (Nazar)
 - permutations (Teodor)
+  Generates successive r length permutations of an iterable.
+  If r is not specified it defaults to the length of the iterable.
+  Iterates over the Cartesian square of the iterable using the product function.
 - combinations (Nadia)
 - combinations_with_replacement (Serhii)
 ## Contributors (19-th team)
