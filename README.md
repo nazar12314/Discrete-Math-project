@@ -21,10 +21,10 @@ Returns iterator with values which are in iterable object.
  - ```python
    items = repeat(10, amount=5)
     ```
-    Convert to a list for better 
+    Convert to a list for a better guise
  - ```python
    print(list(items))
-<!--  [10, 10, 10, 10, 10]   -->
+   <!--  [10, 10, 10, 10, 10]   -->
     ```
 ## product (Nazar)
 - ```python
