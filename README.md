@@ -51,10 +51,21 @@ Returns iterator with values which are in iterable object.
 - combinations (Nadia)
   Returns sorted combinations of length r in iterable.
   Permutations is used to get all possible combinations, then the sorted ones are picked out.
-- combinations_with_replacement (Serhii)
+## combinations_with_replacement (Serhii)
+- ```python
+    combinations_with_replacement(iterable: Iterable, r: int) -> Generator
+   ```
   Generates successive r length combinations of elements in the iterable allowing individual elements to have successive repeats.
   The combination tuples are emitted in lexicographic ordering according to the order of the input iterable.
   Elements are treated as unique based on their position, not on their value.
+#### Example of usage:
+ - ```python
+    combinations_with_replacement('ABC', 2)
+    combinations_with_replacement(['1', '2', '3', '4'], 3)
+   ```
+  This combinations_with_replacement function allows you to generate combinations with replacement. 
+  It is based on the mechanism of lexicographic permutations, which uses the index of the element as a means of determining the uniqueness of the element.
+  Returns sequence elements sorted lexicographically relative to their position (lexicographically relative to position rather than value).
 ## Usage 
     import main
     main.function(args)
