@@ -90,7 +90,7 @@ class product:
             yield tuple()
         else:
             # Include repeat case
-            elements = [tuple(element) for element in self.args] * self.repeat
+            elements = self.args * self.repeat
             result = [[]]
             # Iterate through elements in order to create combinations
             for element in elements:
