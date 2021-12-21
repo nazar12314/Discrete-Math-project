@@ -17,7 +17,7 @@ Returns iterator with values which are in iterable object.
   ```
   Repeat(object [,times]) -> create an iterator which returns the object for the specified number of times.
   If 'amount' is not specified, returns the object endlessly
-- product (Nazar)
+## product (Nazar)
 - ```python
     class product(*iterables, repeat=1) -> Generator
    ```
