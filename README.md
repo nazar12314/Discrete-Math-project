@@ -1,11 +1,11 @@
 # Itertools (12th team)
 [![Tests](https://github.com/nazar12314/Discrete-Math-project/actions/workflows/test.yml/badge.svg)](https://github.com/nazar12314/Discrete-Math-project/actions/workflows/test.yml)
 ## Description
-Our version of the Python itertools module.
-The average time complexity of all functions is O(n).
-With large workloads, the execution time shouldn't exceed 5 minutes, with smaller ones - 3-5 seconds.
-The algorithms were made according to the Python Documentation.
-The tests.py module contains the tests for all the functions, and is run via github actions.
+Our version of the Python itertools module.  
+The average time complexity of all functions is O(n).  
+With large workloads, the execution time shouldn't exceed 5 minutes, with smaller ones - 3-5 seconds.  
+The algorithms were made according to the Python Documentation.  
+The tests.py module contains the tests for all the functions, and is run via github actions.  
 ### Functions
 - count (Dimitriy)
 Returns iterable object of endless cycle.
