@@ -24,7 +24,8 @@ Returns iterator with values which are in iterable object.
     Convert to a list for a better guise
  - ```python
    print(list(items))
-   <!--  [10, 10, 10, 10, 10]   -->
+   
+   Output: <!--  [10, 10, 10, 10, 10]   -->
     ```
 ## product (Nazar)
 - ```python
