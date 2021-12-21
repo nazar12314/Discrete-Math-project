@@ -91,8 +91,8 @@ The tests.py module contains the tests for all the functions, and is run via git
     main.function(args)
 ## Contributors (12-th team)
 - Teodor Muzychuk (permutations, tests.py, README.md, GitHub actions)
-- Nazar Kononenko (repeat, product, GitHub management)
-- Serhii Matsyshyn (combinations_with_replacement)
+- Nazar Kononenko (repeat, product, GitHub management, README.md)
+- Serhii Matsyshyn (combinations_with_replacement, README.md)
 - Nadia Lakoma (combinations)
 - Dimitriy Yevchenko (count, cycle)
 ## License
