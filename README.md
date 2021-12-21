@@ -6,12 +6,12 @@ The average time complexity of all functions is O(n).
 With large workloads, the execution time shouldn't exceed 5 minutes, with smaller ones - 3-5 seconds.  
 The algorithms were made according to the Python Documentation.  
 The tests.py module contains the tests for all the functions, and is run via github actions.  
-### Functions
-- count (Dimitriy)
-Returns iterable object of endless cycle.
-- cycle (Dimitriy)
-Returns iterator with values which are in iterable object.
-## repeat (Nazar)
+## Functions
+### count (Dimitriy)
+  Returns iterable object of endless cycle.
+### cycle (Dimitriy)
+  Returns iterator with values which are in iterable object.
+### repeat (Nazar)
 - ```python
   class repeat(value, amount=None) -> Generator
    ```
@@ -27,7 +27,7 @@ Returns iterator with values which are in iterable object.
    
    Output: <!--  [10, 10, 10, 10, 10]   -->
     ```
-## product (Nazar)
+### product (Nazar)
 - ```python
     class product(*iterables, repeat=1) -> Generator
    ```
@@ -43,15 +43,15 @@ Returns iterator with values which are in iterable object.
   To compute the product of an iterable with itself,
   specify the number of repetitions with the optional 'repeat' keyword argument.
   For example, product(A, repeat=4) means the same as product(A, A, A, A).
-- permutations (Teodor)
+### permutations (Teodor)
   Generates successive r length permutations of an iterable.
   If r is not specified it defaults to the length of the iterable.
   Iterates over the Cartesian square of the range function using the product function.
   Yields a tuple by using the indices from the Cartesian square
-- combinations (Nadia)
+### combinations (Nadia)
   Returns sorted combinations of length r in iterable.
   Permutations is used to get all possible combinations, then the sorted ones are picked out.
-## combinations_with_replacement (Serhii)
+### combinations_with_replacement (Serhii)
 - ```python
     combinations_with_replacement(iterable: Iterable, r: int) -> Generator
    ```
