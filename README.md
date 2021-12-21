@@ -8,8 +8,14 @@ The algorithms were made according to the Python Documentation.
 The tests.py module contains the tests for all the functions, and is run via github actions.
 ### Functions
 - count (Dimitriy)
+- ```python
+def count(path: str) -> Iterable
+- ```
 Returns iterable object of endless cycle.
 - cycle (Dimitriy)
+-```
+def cycle(iterable) -> Iterable
+-```
 Returns iterator with values which are in iterable object.
 - repeat (Nazar)
   Repeat(object [,times]) -> create an iterator which returns the object for the specified number of times.
