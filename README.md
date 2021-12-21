@@ -89,7 +89,7 @@ The tests.py module contains the tests for all the functions, and is run via git
 ## Usage 
     import main
     main.function(args)
-## Project results:
+## Project results
 Using the knowledge gained in the course of discrete mathematics, we created our own version of the Python library "itertools". This project helped us learn about ways to create our own python libraries, helped us learn effective teamwork using the Github system. We were able to implement our own automatic testing of software algorithms, learned to look for errors in algorithms and correct them.
 ## Contributors (12-th team)
 - Teodor Muzychuk (permutations, tests.py, README.md, GitHub actions)
