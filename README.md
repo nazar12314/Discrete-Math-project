@@ -12,9 +12,11 @@ Returns iterable object of endless cycle.
 - cycle (Dimitriy)
 Returns iterator with values which are in iterable object.
 - repeat (Nazar)
+    repeat(value, amount=None) -> Generator
   Repeat(object [,times]) -> create an iterator which returns the object for the specified number of times.
   If 'amount' is not specified, returns the object endlessly
 - product (Nazar)
+    product(*iterables, repeat=1) -> Generator
   Returns cartesian product of input iterables
   Receives as a parameter an array of data, consisting of several groups of values.
   This product function allows you to get a new set of groups in all possible variations
