@@ -10,13 +10,12 @@ def count(start=0, step=1):
     count(8, 6) -> 8, 14, 20, ...
     count(0, 0) -> 0
     """
-    n = start
     if step == 0:
         yield start
     else:
         while True:
-            yield n
-            n += step
+            yield start
+            start += step
 
 
 def cycle(iterable):
