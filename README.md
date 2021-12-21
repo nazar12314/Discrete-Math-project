@@ -57,12 +57,19 @@ The tests.py module contains the tests for all the functions, and is run via git
   If r is not specified it defaults to the length of the iterable.
   Iterates over the Cartesian square of the range function using the product function.
   Yields a tuple by using the indices from the Cartesian square
+  #### Example of usage:
+ - ```python
+    permutations("ABCD", 2)
+   ```
 ### combinations (Nadia)
 - ```python
   combinations(iterable, r) -> Generator
    ```
   Returns sorted combinations of length r in iterable.
   Permutations is used to get all possible combinations, then the sorted ones are picked out.
+- ```python
+  combinations("ABCD", 2)
+  ```
 ### combinations_with_replacement (Serhii)
 - ```python
     combinations_with_replacement(iterable: Iterable, r: int) -> Generator
