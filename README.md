@@ -9,12 +9,12 @@ The tests.py module contains the tests for all the functions, and is run via git
 ### Functions
 - count (Dimitriy)
 - ```python
-def count(path: str) -> Iterable
+- def count(path: str) -> Iterable
 - ```
 Returns iterable object of endless cycle.
 - cycle (Dimitriy)
 -```
-def cycle(iterable) -> Iterable
+- def cycle(iterable) -> Iterable
 -```
 Returns iterator with values which are in iterable object.
 - repeat (Nazar)
