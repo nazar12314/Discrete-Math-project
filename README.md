@@ -23,11 +23,11 @@ Returns iterator with values which are in iterable object.
    ```
   Returns cartesian product of input iterables
   Receives as a parameter an array of data, consisting of several groups of values.
- - Example:
+ # Example of usage:
  - ```python
     product('abc', '123', ['2', '3'], [1, 2, 3], repeat=2)
     product(range(100), range(1000))
- - ```
+   ```
   This product function allows you to get a new set of groups in all possible variations
   from an entered sequence of numbers or characters.
   To compute the product of an iterable with itself,
