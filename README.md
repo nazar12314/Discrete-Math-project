@@ -23,7 +23,7 @@ Returns iterator with values which are in iterable object.
    ```
   Returns cartesian product of input iterables
   Receives as a parameter an array of data, consisting of several groups of values.
- # Example of usage:
+ ##### Example of usage:
  - ```python
     product('abc', '123', ['2', '3'], [1, 2, 3], repeat=2)
     product(range(100), range(1000))
