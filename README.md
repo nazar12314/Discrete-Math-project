@@ -8,13 +8,17 @@ The algorithms were made according to the Python Documentation.
 The tests.py module contains the tests for all the functions, and is run via github actions.
 ### Functions
 - count (Dimitriy)
-Returns iterable object of endless cycle. The main idea is to use generator to allow code work fast for big data.
+Returns iterable object of endless cycle.
 - cycle (Dimitriy)
-Returns iterator with values which are in iterable object. Using generator with the purpose of working with big data.
+Returns iterator with values which are in iterable object.
 - repeat (Nazar)
+- ```python
+  repeat(value, amount=None) -> Generator
+  ```
   Repeat(object [,times]) -> create an iterator which returns the object for the specified number of times.
   If 'amount' is not specified, returns the object endlessly
 - product (Nazar)
+    product(*iterables, repeat=1) -> Generator
   Returns cartesian product of input iterables
   Receives as a parameter an array of data, consisting of several groups of values.
   This product function allows you to get a new set of groups in all possible variations
