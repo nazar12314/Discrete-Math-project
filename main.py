@@ -94,7 +94,7 @@ class product:
             result = [[]]
             # Iterate through elements in order to create combinations
             for element in elements:
-                result = [x + [y] for x in result for y in element]
+                result = [array + [item] for array in result for item in element]
             # Wrap elements into tuples and yield them
             for element in result:
                 yield tuple(element)
