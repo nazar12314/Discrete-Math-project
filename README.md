@@ -11,12 +11,21 @@ The tests.py module contains the tests for all the functions, and is run via git
 Returns iterable object of endless cycle.
 - cycle (Dimitriy)
 Returns iterator with values which are in iterable object.
-- repeat (Nazar)
+## repeat (Nazar)
 - ```python
   class repeat(value, amount=None) -> Generator
-  ```
+   ```
   Repeat(object [,times]) -> create an iterator which returns the object for the specified number of times.
   If 'amount' is not specified, returns the object endlessly
+ #### Example of usage
+ - ```python
+   items = repeat(10, amount=5)
+    ```
+    Convert to a list for better 
+ - ```python
+   print(list(items))
+<!--  [10, 10, 10, 10, 10]   -->
+    ```
 ## product (Nazar)
 - ```python
     class product(*iterables, repeat=1) -> Generator
