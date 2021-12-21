@@ -8,8 +8,14 @@ The algorithms were made according to the Python Documentation.
 The tests.py module contains the tests for all the functions, and is run via github actions.  
 ## Functions
 ### count (Dimitriy)
+- ```python
+  count(start=0, step=1) -> Generator
+   ```
   Returns iterable object of endless cycle.
 ### cycle (Dimitriy)
+- ```python
+  cycle(iterable) -> Generator
+   ```
   Returns iterator with values which are in iterable object.
 ### repeat (Nazar)
 - ```python
@@ -44,11 +50,17 @@ The tests.py module contains the tests for all the functions, and is run via git
   specify the number of repetitions with the optional 'repeat' keyword argument.
   For example, product(A, repeat=4) means the same as product(A, A, A, A).
 ### permutations (Teodor)
+- ```python
+  permutations(iterable, r=None) -> Generator
+   ```
   Generates successive r length permutations of an iterable.
   If r is not specified it defaults to the length of the iterable.
   Iterates over the Cartesian square of the range function using the product function.
   Yields a tuple by using the indices from the Cartesian square
 ### combinations (Nadia)
+- ```python
+  combinations(iterable, r) -> Generator
+   ```
   Returns sorted combinations of length r in iterable.
   Permutations is used to get all possible combinations, then the sorted ones are picked out.
 ### combinations_with_replacement (Serhii)
